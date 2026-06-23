@@ -690,7 +690,7 @@ a  { text-decoration: none; color: inherit; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .pricing-card {
@@ -699,7 +699,10 @@ a  { text-decoration: none; color: inherit; }
   border-radius: var(--radius-xl);
   padding: 36px 32px;
   position: relative;
-  transition: border-color 0.3s, transform 0.3s;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .pricing-card:hover {
   border-color: var(--border-s);
@@ -778,6 +781,10 @@ a  { text-decoration: none; color: inherit; }
 }
 .pricing-features li.dim {
   color: var(--text-dim);
+}
+
+.pricing-card .btn {
+  margin-top: auto;
 }
 
 /* ---- FAQ ---- */
